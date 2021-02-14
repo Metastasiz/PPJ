@@ -1,6 +1,4 @@
-package PPJ.Z15;
-
-import java.util.Arrays;
+package PPJ_01.Z15;
 
 public class Person2 {
     private String name;

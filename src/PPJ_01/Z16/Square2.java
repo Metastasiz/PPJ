@@ -1,4 +1,4 @@
-package PPJ.Z16;
+package PPJ_01.Z16;
 
 public class Square2 {
     private double side;

@@ -1,4 +1,4 @@
-package PPJ.Z19;
+package PPJ_01.Z19;
 
 import java.lang.*;
 

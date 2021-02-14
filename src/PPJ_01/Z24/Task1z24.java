@@ -1,4 +1,4 @@
-package PPJ.Z24;
+package PPJ_01.Z24;
 
 import java.util.Scanner;
 

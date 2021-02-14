@@ -1,4 +1,4 @@
-package PPJ.Z20;
+package PPJ_01.Z20;
 
 import java.util.Arrays;
 

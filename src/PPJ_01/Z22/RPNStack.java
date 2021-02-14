@@ -1,13 +1,5 @@
-package PPJ.Z22;
+package PPJ_01.Z22;
 
-import static java.io.StreamTokenizer.TT_EOF;
-import static java.io.StreamTokenizer.TT_NUMBER;
-import static java.io.StreamTokenizer.TT_WORD;
-
-import java.io.BufferedReader;
-
-import java.io.IOException;
-import java.io.StreamTokenizer;
 import java.util.Arrays;
 
 class main{

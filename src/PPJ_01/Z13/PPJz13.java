@@ -1,6 +1,5 @@
-package PPJ;
+package PPJ_01.Z13;
 
-import javax.swing.*;
 import java.util.Scanner;
 import java.util.Arrays;
 

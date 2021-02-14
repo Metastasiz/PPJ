@@ -1,7 +1,5 @@
-package PPJ.Z14;
+package PPJ_01.Z14;
 
-import javax.swing.*;
-import java.util.Scanner;
 import java.util.Arrays;
 
 public class Main14 {

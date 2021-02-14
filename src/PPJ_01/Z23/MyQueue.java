@@ -1,4 +1,4 @@
-package PPJ.Z23;
+package PPJ_01.Z23;
 
 class MyQueue{
      static class Node {

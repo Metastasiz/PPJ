@@ -1,4 +1,4 @@
-package PPJ.Z18;
+package PPJ_01.Z18;
 
 public class Frac {
     private int num = 0, denom = 1;

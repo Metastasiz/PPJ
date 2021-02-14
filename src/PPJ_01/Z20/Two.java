@@ -1,4 +1,4 @@
-package PPJ.Z20;
+package PPJ_01.Z20;
 
 public class Two {
     public static void main(String[] args) {

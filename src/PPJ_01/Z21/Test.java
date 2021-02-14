@@ -1,4 +1,4 @@
-package PPJ.Z21;
+package PPJ_01.Z21;
 
 public class Test {
     public static void main(String[] args) {

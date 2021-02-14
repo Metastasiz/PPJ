@@ -1,9 +1,5 @@
-package PPJ.Z15;
+package PPJ_01.Z15;
 
-import PPJ.Z15.Person2;
-import PPJ.Z15.Car;
-import javax.swing.*;
-import java.util.Scanner;
 import java.util.Arrays;
 
 public class Main15 {

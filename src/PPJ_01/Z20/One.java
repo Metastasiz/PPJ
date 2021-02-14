@@ -1,4 +1,4 @@
-package PPJ.Z20;
+package PPJ_01.Z20;
 
 class CalculatingDevice{
     private String name;

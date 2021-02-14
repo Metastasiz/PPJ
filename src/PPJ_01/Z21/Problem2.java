@@ -1,4 +1,4 @@
-package PPJ.Z21;
+package PPJ_01.Z21;
 
 import java.util.Scanner;
 import java.io.FileInputStream;

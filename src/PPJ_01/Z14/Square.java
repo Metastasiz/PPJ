@@ -1,4 +1,4 @@
-package PPJ.Z14;
+package PPJ_01.Z14;
 
 public class Square {
     private double a, b;

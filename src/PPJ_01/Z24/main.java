@@ -1,9 +1,6 @@
-package PPJ.Z24;
+package PPJ_01.Z24;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
 import java.util.Scanner;
-import java.io.StreamTokenizer;
 
 public class main {
     public static void main(String[] arg) {

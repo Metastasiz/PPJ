@@ -1,11 +1,8 @@
-package PPJ.Z22;
+package PPJ_01.Z22;
 
-import java.util.Arrays;
 import java.io.BufferedReader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-
-import java.io.IOException;
 
 public class CheckBrac {
 }

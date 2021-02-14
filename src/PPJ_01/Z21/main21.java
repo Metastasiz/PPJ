@@ -1,25 +1,11 @@
-package PPJ.Z21;
+package PPJ_01.Z21;
 
 import java.awt.*;
 import java.util.Arrays;
-import java.util.Scanner;
-
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
-
-import java.io.IOException;
-import java.io.FileNotFoundException;
 
 import java.io.BufferedReader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-
-import static java.io.StreamTokenizer.TT_EOF;
-import static java.io.StreamTokenizer.TT_NUMBER;
-import static java.io.StreamTokenizer.TT_WORD;
-import java.io.StreamTokenizer;
 
 class Person{
     String name = null;

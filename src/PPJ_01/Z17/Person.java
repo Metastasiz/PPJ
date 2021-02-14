@@ -1,4 +1,4 @@
-package PPJ.Z17;
+package PPJ_01.Z17;
 
 public class Person {
     private String name;

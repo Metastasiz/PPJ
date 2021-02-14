@@ -1,4 +1,4 @@
-package PPJ.Z17;
+package PPJ_01.Z17;
 
 public class BankCustomer {
     private Account account = new Account();

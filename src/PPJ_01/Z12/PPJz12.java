@@ -1,4 +1,4 @@
-package PPJ;
+package PPJ_01.Z12;
 
 import java.util.Scanner;
 import java.util.Arrays;
