@@ -22,19 +22,10 @@ class main2{
                 case '[': st.push(c); break;
                 case '{': st.push(c); break;
                 case '(': st.push(c); break;
-                case ']': if (convert(c) != (tmp = st.pop())) {
-                    System.out.println();
-                    System.out.print("ERROR in line " + line + " " + c + " found, but " + convert(tmp) + " expected");
-                    System.out.println(tmp);
-                    return;
-                } else break;
-                case '}':  if (convert(c) != (tmp = st.pop())) {
-                    System.out.println();
-                    System.out.print("ERROR in line " + line + " " + c + " found, but " + convert(tmp) + " expected");
-                    System.out.println(tmp);
-                    return;
-                } else break;
-                case ')': if (convert(c) != (tmp = st.pop())) {
+                case ']':
+                case ')':
+                case '}':
+                    if (convert(c) != (tmp = st.pop())) {
                     System.out.println();
                     System.out.print("ERROR in line " + line + " " + c + " found, but " + convert(tmp) + " expected");
                     System.out.println(tmp);
