@@ -7,15 +7,15 @@ public class Two {
             try {
                 car.drive100km();
             } catch (NotEnoughGas e) {
-                System.out.println("catched");
-                System.err.println(e.getMessage());
+                //System.out.println("catched");
+                System.out.println(e.getMessage());
+                //System.err.println(e.getMessage());
                 car.fill();
 
             }
         }
     }
 }
-
 class Car20{
     public static int fuel = 35, distance = 0;
     public void fill() throws Explosion {
@@ -30,12 +30,10 @@ class Car20{
         System.out.println(distance + "km driven, " + fuel + " litres left");
     }
 }
-
 class NotEnoughGas extends Exception {
     NotEnoughGas() {super();}
     public String getMessage(){return "Only " + Car20.fuel + " liters. Must fill the tank";}
 }
-
 class Explosion extends RuntimeException {
     Explosion() {
         super("Exploded: BOOOM or something");

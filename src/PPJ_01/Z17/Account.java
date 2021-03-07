@@ -3,11 +3,11 @@ package PPJ_01.Z17;
 public class Account {
     private double balance;
     private static double interest = 0;
-    public void deposit(double a) {balance = balance + a;}
-    public void withdraw(double a) {balance = balance - a;}
-    public void transfer(Account a, double b) {balance = balance - b; a.balance = a.balance + b;}
-    public void addInterest() {balance = balance*(1+interest/100);}
-    public static void setInterestRate(double a) {interest = a;}
+    public void deposit(double a) {balance += a;}
+    public void withdraw(double a) {balance -= a;}
+    public void transfer(Account b, int a){withdraw(a); b.deposit(a);}
+    public void addInterest(){balance += balance*interest/100;}
+    public static void setInterestRate(double a){interest = a;}
     public String toString() {return "balance: " + balance;}
     public static void main(String[] arg) {
         Person[] arr = new Person[5];
