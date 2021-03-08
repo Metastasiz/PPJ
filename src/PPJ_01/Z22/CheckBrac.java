@@ -14,14 +14,14 @@ class main2{
         int temp;
         char tmp;
         while ((temp = br.read()) != -1) {
-            tmp = ' ';
             char c = (char)temp;
             System.out.print(c);
             if (c == '\n') line++;
             switch (c) {
-                case '[': st.push(c); break;
-                case '{': st.push(c); break;
-                case '(': st.push(c); break;
+                case '[':
+                case '(':
+                case '{':
+                    st.push(c); break;
                 case ']':
                 case ')':
                 case '}':

@@ -74,7 +74,7 @@ class Car{
 }
 public class main21{
     public static void main(String[] arg) {
-        String filename = "text.txt";
+        String filename = "PPJ_Z21_3.txt";
         String temp;
         int counter = 0;
         try (BufferedReader br = Files.newBufferedReader(Paths.get(filename));

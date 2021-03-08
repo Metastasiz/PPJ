@@ -11,23 +11,23 @@ public class Task1z24 {
             boolean c1 = false, c2 = false, c3 = false, c4 = false, c5 = false, c6 = false;
             //letter+ + punctuation
             // letter end w/ punc
-            if (temp.matches("\\p{L}+\\p{P}")) {counter1++;c1 = true;}
+            if (temp.matches(".*?\\s*\\p{L}+\\p{P}")) {counter1++;c1 = true;}
             // Non-digit
             if (temp.matches("\\D*")) {counter2++;c2 = true;}
             // \b + 3letter + \s+ + 3letter + \s+ + 3letter + \b
             // 3 at least 3-letter
 
             // >>>> ask this
-            if (temp.matches("\\b\\p{L}{3,}\\s+\\p{L}{3,}\\s+\\p{L}{3,}\\b")) {counter3++;c3=true;}
+            if (temp.matches(".*?\\s*(\\p{L}{3,})\\s+(\\p{L}{3,})\\s+(\\p{L}{3,})\\s*.*")) {counter3++;c3=true;}
 
             // \s+ 10-79 | 07|7-9 | 80-88 \s+
             // 7-88
-            if (temp.matches("\\b(0*[789]|[1-7]\\d|8[0-8])\\b")) {counter4++;c4=true;}
+            if (temp.matches(".*?\\s*(0*[789]|[1-7]\\d|8[0-8])\\s*.*")) {counter4++;c4=true;}
             // \w+ + @ + [letter+ + .]+ + letter+
             // Email
-            if (temp.matches("[\\p{L}+[.]?]+[@][\\p{L}+[.]]+\\p{L}+")) {counter5++;c5=true;}
+            if (temp.matches(".*?\\s*[\\p{L}+[.]?]+[@][\\p{L}+[.]]+\\p{L}+\\s*.*")) {counter5++;c5=true;}
             // yyyy-mm-dd
-            if (temp.matches("\\b\\d{4}-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])\\b")) {counter6++;c6 = true;}
+            if (temp.matches(".*?\\s*\\d{4}-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])\\s*.*")) {counter6++;c6 = true;}
 
             System.out.println(temp);
             System.out.print("Letter end w/ punc: " + c1);

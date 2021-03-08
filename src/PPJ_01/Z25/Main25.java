@@ -74,7 +74,7 @@ class Latex {
 }
 class Test{
     public static void main(String[] arg){
-        String text = " something";
+        String text = "asdf something";
         String reg = "\\b\\p{L}+";
         Matcher m = Pattern.compile(reg).matcher(text);
         while (m.find())
