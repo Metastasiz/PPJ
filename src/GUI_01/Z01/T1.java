@@ -10,7 +10,7 @@ public class T1 {
         p3.sayHelloTo(p1); //Hi Jan!
         Subject s = new Subject("GUI");
         s.setTeacher(p1);
-        try { s.addStudent(s1); s.addStudent(s2);}
+        try { s.addStudent(s1); s.addStudent(s2); s.addStudent(s1); s.addStudent(s2);}
         catch(TooManyStudentsException e) { e.printStackTrace(); }
         System.out.println(s); //GUI, teacher: Jan, students: Jasiek
     }
@@ -44,6 +44,7 @@ class Subject extends Person{
     public void addStudent(Student a) throws TooManyStudentsException{
         int i = 0;
         while (true){
+            if (i >= all.length) throw new TooManyStudentsException();
             if (all[i] == null) {all[i] = a; break;}
             else i++;
         }
