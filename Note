@@ -1,0 +1,31 @@
+System.out.print(String.format("oi%08.1f",234.34));
+        System.out.print(new Color(23,44,32));
+        String reg = "(['\"])[^'\"]*\\1";
+        String text = "'abc' xx \"def\" yy \"ghi' zz";
+        Matcher m = Pattern.compile(reg).matcher(text);
+        while (m.find())
+            System.out.println(m.group());
+        System.out.println("\n\n\n");
+
+class Person implements Comparable<Person>{
+    final static int currentYear = java.util.Calendar.getInstance().get(Calendar.YEAR);
+    String name;
+    int birthYear;
+    int height;
+    Person(String n, int b, int h){name = n; birthYear = b; height = h;}
+    @Override
+    public int compareTo(Person o) {
+        int temp = name.compareToIgnoreCase(o.name);
+        //less = negative
+        if (temp != 0) return temp;
+        //less = negative
+        temp = birthYear - o.birthYear;
+        if (temp != 0) return temp;
+        //less = negative
+        return height - o.height;
+    }
+    @Override
+    public String toString(){
+        return name + " is " + (birthYear-currentYear) + " and " + height;
+    }
+}
