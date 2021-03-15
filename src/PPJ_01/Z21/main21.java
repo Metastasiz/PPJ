@@ -37,7 +37,6 @@ class Person{
         for (int i = 0; i < persons.length; i++) {
             if (persons[i].car == null) continue;
             if (persons[i].car.make.equalsIgnoreCase(make)) {
-                System.out.print("asd");
                 r[counter] = persons[i];
                 counter++;
             }

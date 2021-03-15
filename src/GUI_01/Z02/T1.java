@@ -40,10 +40,10 @@ public class T1 {
     }
 }
 abstract class figure{
-    int r = 0, g = 0, b = 0;
+    int r, g, b;
     abstract public double getArea();
     abstract public double getPerimetre();
-    public String getColor(){return "R = " + r + ", G = " + g + ", B = " + b;}
+    public Color getColor(){return new Color(r,g,b);}
     @Override
     public String toString(){return "Area: " + String.format("%.2f", getArea()) + ", Perimetre: " + String.format("%.2f", getPerimetre()) + ", Colour: " + getColor();}
 }
