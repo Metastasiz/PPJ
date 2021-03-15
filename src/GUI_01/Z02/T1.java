@@ -14,17 +14,27 @@ public class T1 {
             System.out.println(a);
         }
 
-        Singer s1 = new Singer("Eminem");
-        s1.sing("ASDFsadfas");
-        s1.sing("AFsadfas");
-        Singer s2 = new Singer("Eagles");
-        s1.sing("aasdFSFSSDFGSE");
-        s1.sing("CUUUNTdafd");
-        Singer s3 = new Singer("Simon & Garfunkel");
-        s1.sing("asdfasdfASDF");
-        s1.sing("SDFGDgdg");
+        Singer s1 = new Singer("Eminem"){
+            @Override
+            public String sing() {
+                return "You own it, you better never let it go";
+            }
+        };
+        Singer s2 = new Singer("Eagles"){
+            @Override
+            public String sing() {
+                return "Hotel California";
+            }
+        };
+        Singer s3 = new Singer("Simon & Garfunkel"){
+            @Override
+            public String sing() {
+                return "Hello darkness, my old friend. I`ve come to talk with you again";
+            }
+        };
         Singer sp[] = {s1, s2, s3};
-        for (Singer s : sp) System.out.println(s);
+        for (Singer s : sp)
+            System.out.println(s);
         System.out.println("\n" + Singer.loudest(sp));
 
     }
@@ -93,38 +103,34 @@ class hexagon extends figure{
     @Override
     public String toString(){return "Hexagon   -> " + super.toString();}
 }
-class Singer{
-    static int INIT_ID = 1;
-    String name;
-    int id;
-    String[] songs = new String[0];
-    Singer(String name){this.name = name; id = INIT_ID++;}
-    public void sing(String song){
-        int temp = songs.length+1;
-        String[] out = new String[temp];
-        for (int i = 0; i < songs.length; i++){
-            out[i] = songs[i];
-        }
-        out[out.length-1] = song;
-        songs = out;
+abstract class Singer {
+    private String name;
+    private int nr;
+    private static int counter = 1;
+
+    public Singer(String name){
+        this.name = name;
+        nr = counter++;
     }
-    public static String loudest(Singer[] a){
-        Singer out = null;
-        int songNr = -1;
+
+    public abstract String sing();
+    public static Singer loudest(Singer[] singers){
+        Singer maxSinger = null;
         int max = -1;
-        for (Singer b : a) {
-            for (int i = 0; i < b.songs.length; i++){
-                int counter = 0;
-                for (int j = 0; j < b.songs[i].length(); j++){
-                    if(Character.isUpperCase(b.songs[i].charAt(j))){counter++;}
-                }
-                if (counter > max){songNr = i; out = b;}
+        for (Singer s : singers){
+            int counter = 0;
+            for (int i = 0; i < s.sing().length(); i++)
+                if (Character.isUpperCase(s.sing().charAt(i)))
+                    counter++;
+            if (counter > max){
+                max = counter;
+                maxSinger = s;
             }
         }
-        return out + out.songs[songNr];
+        return maxSinger;
     }
     @Override
-    public String toString(){
-        return id + " " + name + " ";
+    public String toString() {
+        return "(" + nr + ") " + name + ": " + sing();
     }
 }
