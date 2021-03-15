@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PJATK.iml" filepath="$PROJECT_DIR$/PJATK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PJATK_JAVA.iml" filepath="$PROJECT_DIR$/PJATK_JAVA.iml" />
     </modules>
   </component>
 </project>
